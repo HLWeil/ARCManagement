@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Package.Metadata.props" />
+  <PropertyGroup>
+    <PackageId>PolyglotTemplate.Javascript</PackageId>
+    <PackageTags>FSharp;Fable;polyglot;template;fable-javascript;fable-typescript</PackageTags>
+    <DefineConstants>$(DefineConstants);FABLE_COMPILER;FABLE_COMPILER_JAVASCRIPT;FABLE_COMPILER_TYPESCRIPT</DefineConstants>
+  </PropertyGroup>
+  <Import Project="PolyglotTemplate.Common.props" />
+  <ItemGroup>
+    <PackageReference Include="Fable.Promise" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+[project]
+name = "polyglot_template"
+version = "0.0.1"
+description = "Example F# library published for .NET, JavaScript, and Python."
+authors = [{ name = "Example Author", email = "author@example.com" }]
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+keywords = ["fsharp", "fable", "polyglot", "template"]
+dependencies = ["fable-library==5.22.0"]
+
+[project.urls]
+Repository = "https://github.com/example-owner/PolyglotTemplate"
+Issues = "https://github.com/example-owner/PolyglotTemplate/issues"
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "twine==7.0.0"]
+
+[tool.poetry]
+packages = [
+    { include = "**/*.py", from = "src/PolyglotTemplate", to = "polyglot_template" }
+]
+include = [
+    { path = "src/PolyglotTemplate/py/**/*.py", format = ["sdist", "wheel"] }
+]
+
+[build-system]
+requires = ["poetry-core==2.5.0"]
+build-backend = "poetry.core.masonry.api"

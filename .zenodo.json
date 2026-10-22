@@ -1,0 +1,16 @@
+{
+  "title": "PolyglotTemplate",
+  "description": "Example F# library published for .NET, JavaScript, and Python.",
+  "license": "MIT",
+  "creators": [
+    { "name": "Author, Example", "affiliation": "Example Organization" }
+  ],
+  "keywords": ["F#", "Fable", "polyglot", "template"],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/example-owner/PolyglotTemplate",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

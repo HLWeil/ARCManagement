@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="TestingUtils.fs" />
+    <PackageReference Include="Fable.Pyxpecto" />
+    <!-- Lift Pyxpecto's older Python binding to a current Fable.Core-compatible version. -->
+    <PackageReference Include="Fable.Python" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Condition="'$(FABLE_COMPILER)' != 'true'" Include="../../src/PolyglotTemplate/PolyglotTemplate.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_JAVASCRIPT)' == 'true' Or '$(FABLE_COMPILER_TYPESCRIPT)' == 'true'" Include="../../src/PolyglotTemplate/PolyglotTemplate.Javascript.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_PYTHON)' == 'true'" Include="../../src/PolyglotTemplate/PolyglotTemplate.Python.fsproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Helpers.fs" />
+    <Compile Include="MessagePrompts.fs" />
+    <Compile Include="ProjectInfo.fs" />
+    <Compile Include="BasicTasks.fs" />
+    <Compile Include="PackageTasks.fs" />
+    <Compile Include="TestTasks.fs" />
+    <Compile Include="ReleaseNotesTasks.fs" />
+    <Compile Include="ReleaseTasks.fs" />
+    <Compile Include="Build.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BlackFox.Fake.BuildTask" />
+    <PackageReference Include="Fake.Core.Process" />
+    <PackageReference Include="Fake.Core.ReleaseNotes" />
+    <PackageReference Include="Fake.Core.Target" />
+    <PackageReference Include="Fake.DotNet.Cli" />
+    <PackageReference Include="Fake.IO.FileSystem" />
+    <PackageReference Include="Fake.JavaScript.Npm" />
+    <PackageReference Include="Fake.Tools.Git" />
+    <PackageReference Include="Fake.Extensions.Release" />
+  </ItemGroup>
+  <Import Project="Build.Packages.props" />
+</Project>

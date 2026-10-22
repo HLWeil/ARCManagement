@@ -1,0 +1,36 @@
+# .NET and FAKE
+**/bin/
+**/obj/
+.fake/
+*.nupkg
+*.snupkg
+*.binlog
+
+# Node and generated TypeScript
+node_modules/
+src/PolyglotTemplate/ts/
+tests/**/ts/
+
+# Python and generated Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+src/PolyglotTemplate/py/
+tests/**/py/
+*.egg-info/
+
+# Build and test output
+dist/
+tmp/
+TestResults/
+
+# Editors and local credentials
+.vs/
+.idea/
+*.user
+*.suo
+.DS_Store
+.env
+.env.*
+.npmrc

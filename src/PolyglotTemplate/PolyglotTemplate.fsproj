@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Package.Metadata.props" />
+  <PropertyGroup>
+    <PackageId>PolyglotTemplate</PackageId>
+    <PackageTags>FSharp;Fable;polyglot;template;fable-dotnet</PackageTags>
+  </PropertyGroup>
+  <Import Project="PolyglotTemplate.Common.props" />
+</Project>

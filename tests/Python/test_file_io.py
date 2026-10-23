@@ -2,7 +2,7 @@ import asyncio
 
 import pytest
 
-from polyglot_template import (
+from arc_management import (
     ensure_directory_async,
     read_text_async,
     write_text_async,

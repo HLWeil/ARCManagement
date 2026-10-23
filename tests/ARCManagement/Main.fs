@@ -1,9 +1,9 @@
-module PolyglotTemplate.Tests.Main
+module ARCManagement.Tests.Main
 
 open Fable.Core
 open Fable.Pyxpecto
 
-let all = testList "PolyglotTemplate" [ ExampleModel.tests; FileIO.tests ]
+let all = testList "ARCManagement" [ ExampleModel.tests; FileIO.tests ]
 
 #if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT
 open TestingUtils.TSUtils

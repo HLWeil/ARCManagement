@@ -19,12 +19,12 @@ let runTestsDotnet = BuildTask.createFn "RunTestsDotnet" [build] (fun config ->
     run "dotnet" (["run"; "--project"; allTestsProject; "--configuration"; configuration; "--no-build"; "--"] @ flags config.Context.Arguments))
 
 let runTestsJS = BuildTask.createFn "RunTestsJS" [build] (fun config ->
-    run "dotnet" ["fable"; allTestsProject; "--lang"; "ts"; "--fableLib"; "@fable-org/fable-library-ts"; "--noCache"; "-e"; "fs.ts"; "-o"; "tests/PolyglotTemplate/ts"]
-    focused config.Context.Arguments (fun () -> run "npx" ["vitest"; "run"; "tests/PolyglotTemplate/ts/Main.fs.ts"]))
+    run "dotnet" ["fable"; allTestsProject; "--lang"; "ts"; "--fableLib"; "@fable-org/fable-library-ts"; "--noCache"; "-e"; "fs.ts"; "-o"; "tests/ARCManagement/ts"]
+    focused config.Context.Arguments (fun () -> run "npx" ["vitest"; "run"; "tests/ARCManagement/ts/Main.fs.ts"]))
 
 let runTestsPy = BuildTask.createFn "RunTestsPy" [build] (fun config ->
-    run "dotnet" ["fable"; allTestsProject; "--lang"; "python"; "--noCache"; "-o"; "tests/PolyglotTemplate/py"]
-    runPython (["tests/PolyglotTemplate/py/main.py"] @ flags config.Context.Arguments))
+    run "dotnet" ["fable"; allTestsProject; "--lang"; "python"; "--noCache"; "-o"; "tests/ARCManagement/py"]
+    runPython (["tests/ARCManagement/py/main.py"] @ flags config.Context.Arguments))
 
 let runTestsJSNative = BuildTask.createFn "RunTestsJSNative" [packJS] (fun config ->
     focused config.Context.Arguments (fun () -> run "npx" ["vitest"; "run"; "tests/JavaScript"]))

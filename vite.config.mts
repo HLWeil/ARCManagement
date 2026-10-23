@@ -5,8 +5,8 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   plugins: [
     dts({
-      entryRoot: 'src/PolyglotTemplate',
-      include: ['src/PolyglotTemplate/**/*.ts'],
+      entryRoot: 'src/ARCManagement',
+      include: ['src/ARCManagement/**/*.ts'],
       bundleTypes: false,
       afterDiagnostic(diagnostics) {
         if (diagnostics.some(diagnostic => diagnostic.category === 1)) {
@@ -20,8 +20,8 @@ export default defineConfig({
     target: 'es2022',
     minify: false,
     lib: {
-      entry: fileURLToPath(new URL('./src/PolyglotTemplate/index.ts', import.meta.url)),
-      name: 'PolyglotTemplate',
+      entry: fileURLToPath(new URL('./src/ARCManagement/index.ts', import.meta.url)),
+      name: 'ARCManagement',
       formats: ['es'],
       fileName: () => 'index.js',
     },
@@ -30,7 +30,7 @@ export default defineConfig({
     },
   },
   test: {
-    include: ['tests/PolyglotTemplate/ts/Main.fs.ts', 'tests/JavaScript/**/*.test.ts'],
+    include: ['tests/ARCManagement/ts/Main.fs.ts', 'tests/JavaScript/**/*.test.ts'],
     environment: 'node',
     allowOnly: process.env.FAIL_ON_FOCUSED_TESTS !== '1',
     testTimeout: 30_000,

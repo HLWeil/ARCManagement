@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ExampleModel, getRuntimeName } from 'polyglottemplate';
+import { ExampleModel, getRuntimeName } from 'arcmanagement';
 
 describe('public npm model', () => {
   it('exposes attached properties and methods', () => {

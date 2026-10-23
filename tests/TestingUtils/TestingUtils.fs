@@ -2,7 +2,7 @@ module TestingUtils
 
 open Fable.Core
 open Fable.Pyxpecto
-open PolyglotTemplate.CrossAsync
+open ARCManagement.CrossAsync
 
 let testCaseCrossAsync name (operation: unit -> CrossAsync<unit>) =
     testCaseAsync name (async { do! operation () |> asAsync })
@@ -13,15 +13,15 @@ let private createTemporaryDirectory () : CrossAsync<string> =
         const fs = await import('node:fs/promises');
         const os = await import('node:os');
         const path = await import('node:path');
-        return fs.mkdtemp(path.join(os.tmpdir(), 'polyglot-template-'));
+        return fs.mkdtemp(path.join(os.tmpdir(), 'arc-management-'));
     })()"""
 #endif
 #if FABLE_COMPILER_PYTHON
-    async { return Fable.Core.PyInterop.emitPyExpr () "__import__('tempfile').mkdtemp(prefix='polyglot-template-')" }
+    async { return Fable.Core.PyInterop.emitPyExpr () "__import__('tempfile').mkdtemp(prefix='arc-management-')" }
 #endif
 #if !FABLE_COMPILER
     async {
-        let path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "polyglot-template-" + System.Guid.NewGuid().ToString("N"))
+        let path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "arc-management-" + System.Guid.NewGuid().ToString("N"))
         System.IO.Directory.CreateDirectory path |> ignore
         return path
     }

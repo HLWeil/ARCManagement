@@ -1,7 +1,7 @@
-module PolyglotTemplate.Tests.ExampleModel
+module ARCManagement.Tests.ExampleModel
 
 open Fable.Pyxpecto
-open PolyglotTemplate
+open ARCManagement
 
 let tests = testList "ExampleModel" [
     testCase "construct and mutate" (fun () ->

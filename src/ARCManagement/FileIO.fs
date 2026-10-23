@@ -1,6 +1,6 @@
-module PolyglotTemplate.FileIO
+module ARCManagement.FileIO
 
-open PolyglotTemplate.CrossAsync
+open ARCManagement.CrossAsync
 
 #if FABLE_COMPILER_JAVASCRIPT || FABLE_COMPILER_TYPESCRIPT
 open Fable.Core

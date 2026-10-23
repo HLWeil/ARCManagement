@@ -5,26 +5,27 @@ applicable parts of [DataHubClient's AGENTS.md](https://github.com/nfdi4plants/D
 
 ## What this repo is
 
-PolyglotTemplate is a GitHub template for libraries written once in F# and
-compiled for .NET or transpiled to TypeScript and Python with Fable. Packages
-are distributed through NuGet, npm, and PyPI.
+ARCManagement is a library for managing ARCs (Annotated Research Contexts),
+written once in F# and compiled for .NET or transpiled to TypeScript and Python
+with Fable. Packages are distributed through NuGet (`ARCManagement`), npm
+(`arcmanagement`), and PyPI (`arc-management`, imported as `arc_management`).
 
-Read [README.md](README.md) for the project layout, setup, customization checklist,
-and build targets. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution
-workflow. Keep the template's examples and dependencies small.
+Read [README.md](README.md) for the project layout, setup, and build targets.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow. Keep
+dependencies small.
 
 ## Architecture
 
-- One source tree, `src/PolyglotTemplate`, contains the shared library. Its three
+- One source tree, `src/ARCManagement`, contains the shared library. Its three
   project files select the .NET, JavaScript/TypeScript, and Python variants.
-- All three variants import `PolyglotTemplate.Common.props`. Add shared `.fs`
+- All three variants import `ARCManagement.Common.props`. Add shared `.fs`
   files to its compile list in dependency order; F# compilation is order-sensitive.
 - Keep platform-specific implementation details behind the appropriate
   `FABLE_COMPILER_*` directives. Shared code must remain usable on all targets.
-- Public npm exports live in `src/PolyglotTemplate/index.ts`; public Python
-  exports and async adapters live in `src/PolyglotTemplate/__init__.py`.
+- Public npm exports live in `src/ARCManagement/index.ts`; public Python
+  exports and async adapters live in `src/ARCManagement/__init__.py`.
   Update these facades when adding public APIs.
-- Shared F# tests live in `tests/PolyglotTemplate`, with reusable helpers in
+- Shared F# tests live in `tests/ARCManagement`, with reusable helpers in
   `tests/TestingUtils`. Native package tests live in `tests/JavaScript` and
   `tests/Python`; `tests/WebBundling` checks browser bundling.
 - The executable FAKE project under `build/` orchestrates compilation,
@@ -73,8 +74,8 @@ bash ./build.sh Pack                             # Build all registry artifacts
 ```
 
 - On Windows, replace `bash ./build.sh` with `build.cmd`, keeping the arguments.
-- For quick .NET iteration, use `dotnet build PolyglotTemplate.sln` or
-  `dotnet run --project tests/PolyglotTemplate/PolyglotTemplate.Tests.fsproj`.
+- For quick .NET iteration, use `dotnet build ARCManagement.sln` or
+  `dotnet run --project tests/ARCManagement/ARCManagement.Tests.fsproj`.
 - Pipeline targets run cleanup as a prerequisite. Inspect generated output
   before starting another invocation that removes it.
 - Use the repository's tool versions and restore its local Fable tool with

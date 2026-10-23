@@ -1,4 +1,4 @@
-# Contributing to ARCtrl
+# Contributing to ARCManagement
 
 
 
@@ -49,7 +49,7 @@
 
 4. Install pip dependencies
 
-   3. `uv pip install -r pyproject.toml --group dev`
+   `uv pip install -r pyproject.toml --group dev`
 
 Verify correct setup with `./build.cmd runtests` ✨
 
@@ -70,7 +70,7 @@ Verify correct setup with `./build.cmd runtests` ✨
 
 4. Install pip dependencies
 
-   3. `uv pip install -r pyproject.toml --group dev`
+   `uv pip install -r pyproject.toml --group dev`
 
 Verify correct setup with `bash build.sh runtests` ✨
 
@@ -84,7 +84,7 @@ Core design decisions here:
 - Avoid referencing external libraries.
 - Do not use `async` but our own `CrossAsync` implementation, which is compatible with Fable.
 - Use the `[AttachMembers]` attribute on classes.
-- If you want to expose a class in JavaScript or Python, reference them in [src/PolyglotTemplate/__init__.py](src/PolyglotTemplate/__init__.py) and [src/PolyglotTemplate/index.ts](src/PolyglotTemplate/index.ts) respectively.
+- If you want to expose a class in JavaScript or Python, reference them in [src/ARCManagement/index.ts](src/ARCManagement/index.ts) and [src/ARCManagement/__init__.py](src/ARCManagement/__init__.py) respectively.
 
 ## Test-driven Development
 
@@ -102,5 +102,5 @@ You can run the tests using the following commands:
 - `build.cmd runtestsjs` (Windows) or `bash build.sh runtestsjs` (Linux/macOS).  This will transpile the F# code to JavaScript and run the JavaScript tests.
 - `build.cmd runtestsdotnet` (Windows) or `bash build.sh runtestsdotnet` (Linux/macOS). This will run the F# tests using the .NET runtime.
 
-You can set tests to focused mode by renaming the testfunction from `testCase` to `pTestCase`. This will only run the focused tests. 
+You can set tests to focused mode by renaming the testfunction from `testCase` to `ftestCase`. This will only run the focused tests.
 Please remember to rename the testfunction back to `testCase` before committing your changes, so that all tests are run in the CI/CD pipeline.

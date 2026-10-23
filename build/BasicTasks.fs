@@ -27,11 +27,11 @@ let hasArgument argument (arguments: string list) =
 
 let clean = BuildTask.create "Clean" [] {
     let directories = [
-        "src/PolyglotTemplate/bin"; "src/PolyglotTemplate/obj"
-        "src/PolyglotTemplate/ts"; "src/PolyglotTemplate/py"
+        "src/ARCManagement/bin"; "src/ARCManagement/obj"
+        "src/ARCManagement/ts"; "src/ARCManagement/py"
         "tests/TestingUtils/bin"; "tests/TestingUtils/obj"
-        "tests/PolyglotTemplate/bin"; "tests/PolyglotTemplate/obj"
-        "tests/PolyglotTemplate/ts"; "tests/PolyglotTemplate/py"
+        "tests/ARCManagement/bin"; "tests/ARCManagement/obj"
+        "tests/ARCManagement/ts"; "tests/ARCManagement/py"
         "dist"
     ]
     for directory in directories do

@@ -1,27 +1,27 @@
 [project]
-name = "polyglot_template"
+name = "arc-management"
 version = "0.0.1"
-description = "Example F# library published for .NET, JavaScript, and Python."
-authors = [{ name = "Example Author", email = "author@example.com" }]
+description = "F# library for managing ARCs (Annotated Research Contexts), published for .NET, JavaScript, and Python."
+authors = [{ name = "Heinrich Lukas Weil", email = "weil@rptu.de" }]
 requires-python = ">=3.12"
 readme = "README.md"
 license = "MIT"
-keywords = ["fsharp", "fable", "polyglot", "template"]
+keywords = ["fsharp", "fable", "arc", "annotated-research-context", "research-data-management"]
 dependencies = ["fable-library==5.22.0"]
 
 [project.urls]
-Repository = "https://github.com/example-owner/PolyglotTemplate"
-Issues = "https://github.com/example-owner/PolyglotTemplate/issues"
+Repository = "https://github.com/HLWeil/ARCManagement"
+Issues = "https://github.com/HLWeil/ARCManagement/issues"
 
 [dependency-groups]
 dev = ["pytest==9.1.1", "twine==7.0.0"]
 
 [tool.poetry]
 packages = [
-    { include = "**/*.py", from = "src/PolyglotTemplate", to = "polyglot_template" }
+    { include = "**/*.py", from = "src/ARCManagement", to = "arc_management" }
 ]
 include = [
-    { path = "src/PolyglotTemplate/py/**/*.py", format = ["sdist", "wheel"] }
+    { path = "src/ARCManagement/py/**/*.py", format = ["sdist", "wheel"] }
 ]
 
 [build-system]

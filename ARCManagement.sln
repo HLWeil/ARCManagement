@@ -5,13 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PolyglotTemplate", "src\PolyglotTemplate\PolyglotTemplate.fsproj", "{720A5255-3806-4682-A04A-DF601C95FA9C}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ARCManagement", "src\ARCManagement\ARCManagement.fsproj", "{720A5255-3806-4682-A04A-DF601C95FA9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{3C8B6973-1B45-5269-ECE3-1CF0EF1E7A00}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PolyglotTemplate.Javascript", "src\PolyglotTemplate\PolyglotTemplate.Javascript.fsproj", "{3560C92B-7740-4F3C-A3B4-CFA08A59BB81}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ARCManagement.Javascript", "src\ARCManagement\ARCManagement.Javascript.fsproj", "{3560C92B-7740-4F3C-A3B4-CFA08A59BB81}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PolyglotTemplate.Python", "src\PolyglotTemplate\PolyglotTemplate.Python.fsproj", "{81D5CD13-3D25-4FAB-9722-1DBFA09A6A08}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ARCManagement.Python", "src\ARCManagement\ARCManagement.Python.fsproj", "{81D5CD13-3D25-4FAB-9722-1DBFA09A6A08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
 EndProject
@@ -19,7 +19,7 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestingUtils", "tests\Testi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared Tests", "Shared Tests", "{A0E1BAFD-0C95-8A1A-2846-9B9F6BE1508C}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PolyglotTemplate.Tests", "tests\PolyglotTemplate\PolyglotTemplate.Tests.fsproj", "{BAAE2E47-CF9E-45EA-B987-F164FBA0CAA8}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ARCManagement.Tests", "tests\ARCManagement\ARCManagement.Tests.fsproj", "{BAAE2E47-CF9E-45EA-B987-F164FBA0CAA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{DEE5DD87-39C1-BF34-B639-A387DCCF972B}"
 EndProject

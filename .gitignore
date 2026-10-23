@@ -8,7 +8,7 @@
 
 # Node and generated TypeScript
 node_modules/
-src/PolyglotTemplate/ts/
+src/ARCManagement/ts/
 tests/**/ts/
 
 # Python and generated Python
@@ -16,7 +16,7 @@ tests/**/ts/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-src/PolyglotTemplate/py/
+src/ARCManagement/py/
 tests/**/py/
 *.egg-info/
 

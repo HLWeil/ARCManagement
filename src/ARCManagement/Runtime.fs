@@ -1,4 +1,4 @@
-module PolyglotTemplate.Runtime
+module ARCManagement.Runtime
 
 /// Demonstrates selecting native emits at compile time.
 let getRuntimeName () : string =

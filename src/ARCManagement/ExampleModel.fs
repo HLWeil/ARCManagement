@@ -1,4 +1,4 @@
-namespace PolyglotTemplate
+namespace ARCManagement
 
 open Fable.Core
 

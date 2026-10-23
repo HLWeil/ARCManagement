@@ -10,8 +10,8 @@
     <PackageReference Include="Fable.Python" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Condition="'$(FABLE_COMPILER)' != 'true'" Include="../../src/PolyglotTemplate/PolyglotTemplate.fsproj" />
-    <ProjectReference Condition="'$(FABLE_COMPILER_JAVASCRIPT)' == 'true' Or '$(FABLE_COMPILER_TYPESCRIPT)' == 'true'" Include="../../src/PolyglotTemplate/PolyglotTemplate.Javascript.fsproj" />
-    <ProjectReference Condition="'$(FABLE_COMPILER_PYTHON)' == 'true'" Include="../../src/PolyglotTemplate/PolyglotTemplate.Python.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER)' != 'true'" Include="../../src/ARCManagement/ARCManagement.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_JAVASCRIPT)' == 'true' Or '$(FABLE_COMPILER_TYPESCRIPT)' == 'true'" Include="../../src/ARCManagement/ARCManagement.Javascript.fsproj" />
+    <ProjectReference Condition="'$(FABLE_COMPILER_PYTHON)' == 'true'" Include="../../src/ARCManagement/ARCManagement.Python.fsproj" />
   </ItemGroup>
 </Project>

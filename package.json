@@ -1,17 +1,17 @@
 {
-  "name": "polyglottemplate",
+  "name": "arcmanagement",
   "version": "0.0.1",
-  "description": "Example F# library published for .NET, JavaScript, and Python.",
+  "description": "F# library for managing ARCs (Annotated Research Contexts), published for .NET, JavaScript, and Python.",
   "type": "module",
   "license": "MIT",
-  "author": "Example Author <author@example.com>",
+  "author": "Heinrich Lukas Weil <weil@rptu.de> (https://github.com/HLWeil)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/example-owner/PolyglotTemplate.git"
+    "url": "git+https://github.com/HLWeil/ARCManagement.git"
   },
-  "homepage": "https://github.com/example-owner/PolyglotTemplate#readme",
-  "bugs": { "url": "https://github.com/example-owner/PolyglotTemplate/issues" },
-  "keywords": ["fsharp", "fable", "polyglot", "template"],
+  "homepage": "https://github.com/HLWeil/ARCManagement#readme",
+  "bugs": { "url": "https://github.com/HLWeil/ARCManagement/issues" },
+  "keywords": ["fsharp", "fable", "arc", "annotated-research-context", "research-data-management"],
   "main": "./dist/ts/index.js",
   "module": "./dist/ts/index.js",
   "types": "./dist/ts/index.d.ts",

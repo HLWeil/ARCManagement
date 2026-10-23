@@ -4,6 +4,6 @@
     <Compile Include="ExampleModel.fs" />
     <Compile Include="Runtime.fs" />
     <Compile Include="FileIO.fs" />
-    <Content Include="PolyglotTemplate.Common.props" Pack="true" PackagePath="fable/" />
+    <Content Include="ARCManagement.Common.props" Pack="true" PackagePath="fable/" />
   </ItemGroup>
 </Project>

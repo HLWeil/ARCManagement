@@ -4,12 +4,12 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <FablePackageType>library</FablePackageType>
     <Version>0.0.1</Version>
-    <Authors>Example Author</Authors>
-    <Description>Example F# library published for .NET, JavaScript, and Python.</Description>
+    <Authors>Heinrich Lukas Weil</Authors>
+    <Description>F# library for managing ARCs (Annotated Research Contexts), published for .NET, JavaScript, and Python.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/example-owner/PolyglotTemplate</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/example-owner/PolyglotTemplate</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/HLWeil/ARCManagement</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HLWeil/ARCManagement</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
   <ItemGroup>

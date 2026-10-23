@@ -1,4 +1,4 @@
-module PolyglotTemplate.CrossAsync
+module ARCManagement.CrossAsync
 
 open Fable.Core
 

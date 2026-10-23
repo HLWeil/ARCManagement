@@ -1,28 +1,32 @@
-# PolyglotTemplate
+# ARCManagement
 
-An example library written in F#, compiled for .NET, and transpiled with Fable to
-TypeScript and Python. Adapt the shared sources once and publish NuGet, npm, and
-PyPI packages from the same repository. The build and async patterns are adapted
-from [ARCtrl](https://github.com/nfdi4plants/ARCtrl).
+An F# library for managing ARCs (Annotated Research Contexts), compiled for .NET
+and transpiled with Fable to TypeScript and Python. The shared sources are written
+once and published as NuGet, npm, and PyPI packages from this repository. The
+build and async patterns are adapted from [ARCtrl](https://github.com/nfdi4plants/ARCtrl).
 
-## Create your repository
-
-Select **Use this template → Create a new repository** on GitHub, then clone your
-new repository. To offer a customized version as a template, enable **Template
-repository** in its GitHub repository settings. This repository contains the
-project directly at its root.
-
-All package names, descriptions, authors, and links below are examples. Customize
-them before publishing. NuGet packages start at `0.0.1`:
+## Packages
 
 | Registry | Package |
 | --- | --- |
-| NuGet | `PolyglotTemplate`, `PolyglotTemplate.Javascript`, `PolyglotTemplate.Python` |
-| npm | `polyglottemplate` (ES modules) |
-| PyPI | `polyglot_template`|
+| NuGet | `ARCManagement`, `ARCManagement.Javascript`, `ARCManagement.Python` |
+| npm | `arcmanagement` (ES modules) |
+| PyPI | `arc-management` |
 
 PyPI normalizes underscores and hyphens in distribution names. Python imports
-still use underscores: `import polyglot_template`.
+use underscores:
+
+```fsharp
+open ARCManagement
+```
+
+```ts
+import { ExampleModel } from 'arcmanagement';
+```
+
+```python
+from arc_management import ExampleModel
+```
 
 ## Prerequisites and setup
 
@@ -32,13 +36,14 @@ still use underscores: `import polyglot_template`.
 - uv **0.13.5** on `PATH`.
 - Git for release-note generation, tags, and releases.
 
-Run these commands at the repository root:
+Run these commands at the repository root (use `python3` instead of `py` on
+Linux/macOS):
 
 ```text
 dotnet tool restore
 npm install
-uv pip install -r pyproject.toml --group dev
 py -m venv .venv
+uv pip install -r pyproject.toml --group dev
 ```
 
 On Windows use `build.cmd`; on Linux/macOS use `bash ./build.sh`. The launchers
@@ -55,8 +60,8 @@ test target on Windows and Ubuntu for pushes and pull requests to `main`.
 ## Project layout
 
 ```text
-PolyglotTemplate/
-├── PolyglotTemplate.sln                        # Solution containing library, test, and build projects
+ARCManagement/
+├── ARCManagement.sln                          # Solution containing library, test, and build projects
 ├── build.cmd                                  # Windows build launcher; restores local .NET tools
 ├── build.sh                                   # Bash build launcher; restores local .NET tools
 ├── global.json                                # Selects the .NET SDK version
@@ -69,7 +74,7 @@ PolyglotTemplate/
 ├── package-lock.json                          # Resolved npm dependency versions
 ├── pyproject.toml                             # PyPI metadata, package mapping, dependencies, and backend
 ├── uv.lock                                    # Resolved Python dependency versions
-├── README.md                                  # Repository setup and customization instructions
+├── README.md                                  # Repository setup and usage instructions
 ├── RELEASE_NOTES.md                           # Release history and source version for packaging
 ├── tsconfig.json                              # TypeScript checking and declaration settings
 ├── vite.config.mts                            # ESM packaging, declaration generation, and Vitest settings
@@ -92,12 +97,12 @@ PolyglotTemplate/
 │   └── Build.fs                               # Register targets and select the default build
 ├── src/                                       # Library source and shared package metadata
 │   ├── Package.Metadata.props                 # Shared NuGet authors, description, URLs, license, and version
-│   └── PolyglotTemplate/                      # One shared library with three compilation variants
+│   └── ARCManagement/                         # One shared library with three compilation variants
 │       ├── Directory.Build.props              # Separate restore/build output paths for each project
-│       ├── PolyglotTemplate.Common.props      # Ordered F# source list shared by all three variants
-│       ├── PolyglotTemplate.fsproj            # .NET library and NuGet package
-│       ├── PolyglotTemplate.Javascript.fsproj # JavaScript/TypeScript variant and NuGet package
-│       ├── PolyglotTemplate.Python.fsproj     # Python transpilation variant and NuGet package
+│       ├── ARCManagement.Common.props         # Ordered F# source list shared by all three variants
+│       ├── ARCManagement.fsproj               # .NET library and NuGet package
+│       ├── ARCManagement.Javascript.fsproj    # JavaScript/TypeScript variant and NuGet package
+│       ├── ARCManagement.Python.fsproj        # Python transpilation variant and NuGet package
 │       ├── CrossAsync.fs                      # Unify JavaScript Promises with .NET/Python Async
 │       ├── ExampleModel.fs                    # Mutable class with AttachMembers and an independent Copy()
 │       ├── Runtime.fs                         # Select native emits with Fable compiler directives
@@ -108,8 +113,8 @@ PolyglotTemplate/
     ├── TestingUtils/                          # Helpers reused by the shared test suite
     │   ├── TestingUtils.fsproj                # Test dependencies and target-specific library references
     │   └── TestingUtils.fs                    # Async tests, temporary-directory cleanup, and Vitest bindings
-    ├── PolyglotTemplate/                      # Shared F# tests executed on all three targets
-    │   ├── PolyglotTemplate.Tests.fsproj      # Executable shared test project
+    ├── ARCManagement/                         # Shared F# tests executed on all three targets
+    │   ├── ARCManagement.Tests.fsproj         # Executable shared test project
     │   ├── ExampleModel.Tests.fs              # Model construction, mutation, copies, and compiler branches
     │   ├── FileIO.Tests.fs                    # UTF-8 roundtrips, overwrites, empty files, and errors
     │   └── Main.fs                            # Collect shared tests and select the platform runner
@@ -125,8 +130,8 @@ PolyglotTemplate/
         └── vite.config.mts                    # Bundle the consumer into dist/browser-smoke
 ```
 
-Generated source goes to `src/PolyglotTemplate/ts` and `src/PolyglotTemplate/py`.
-Shared test transpilation goes to `tests/PolyglotTemplate/ts` and `py`.
+Generated source goes to `src/ARCManagement/ts` and `src/ARCManagement/py`.
+Shared test transpilation goes to `tests/ARCManagement/ts` and `py`.
 These directories are ignored and recreated by build targets.
 
 | Artifact | Location |
@@ -158,46 +163,9 @@ target builds the solution. Targets perform their prerequisites automatically;
 | `PackDotNet`, `PackJS`, `PackPy` | Create the corresponding package artifacts |
 | `Pack` | Create all three NuGet packages, the npm archive, and Python distributions |
 
-## Customization checklist
-
-Choose a name for your project and update every applicable entry below. Rename files/folders and
-references together; update the solution through your IDE or `dotnet sln`.
-
-| Area | Places to update |
-| --- | --- |
-| Repository | GitHub repository name and template setting; solution filename and entries; source/test directory and project filenames |
-| F# identity | Namespaces/modules in all F# source and tests; package IDs/tags in the three source projects; project references and shared props filename/imports |
-| Shared NuGet metadata | `src/Package.Metadata.props`: authors, description, URLs, license, README location, version |
-| Build identity | `build/ProjectInfo.fs`: project, owner, repository URL, solution, source/test paths, library project names, output paths if changed |
-| Build paths | `build/BasicTasks.fs`, `TestTasks.fs`, `ReleaseNotesTasks.fs`: cleanup, transpilation/test paths, metadata path; launchers if the build location changes |
-| npm metadata | `package.json`: name, description, author/email, repository, homepage, issues URL, keywords, version; main/module/types/exports/files when paths change |
-| Python metadata | `pyproject.toml`: name, description, authors/email, URLs, keywords, version, package mapping, generated-file include paths |
-| Facades | `src/PolyglotTemplate/index.ts` and `__init__.py`: exports/imports, `__all__`, async adapters when source modules or APIs change |
-| Compiler/bundler configuration | `tsconfig.json` source paths; `vite.config.mts` entry, library name, declaration paths, test paths; source-local `Directory.Build.props` root import if moving folders |
-| Tests | Shared namespaces/references; native npm/Python package imports; generated-test paths in build/config; browser fixture imports and title |
-| Git ignore rules | `.gitignore`: renamed source-generated directories; any additional generated outputs |
-| CI | `.github/workflows/build-test.yml`: default branch, runtime versions, launcher paths if changed |
-| Documentation | This README: title, links/badges if added, installation/import examples, commands, paths, package names |
-| Release metadata | `RELEASE_NOTES.md`: your release history; shared version plus npm/Python versions must agree |
-| Attribution | `LICENSE`: copyright for new code; preserve required DataPLANT/copied-code attribution |
-| Zenodo | `.zenodo.json`: title, description, creators/affiliations, license, keywords, repository identifier; add only your own valid ORCID/DOI identifiers |
-| Registry/release setup | Reserve package names, configure registry authentication, set GitHub draft-release identity/token, check release branch/remotes |
-| Lockfiles | Regenerate `package-lock.json` and `uv.lock` after renaming or changing dependencies; never copy another project's lockfiles |
-
-After customization, run `npm install --package-lock-only`, `uv lock`, and the
-full test and packaging targets. Search tracked files for missed placeholders:
-
-```text
-git grep -n -E 'PolyglotTemplate|polyglottemplate|polyglot_template|example-owner|Example Author|author@example.com|Example Organization'
-```
-
-Inspect each match; your checklist/documentation and preserved attribution may
-intentionally mention the template. Keep the new project's metadata consistent
-across all registries.
-
 ## Versions and releases
 
-Commit your customized repository before using Git-based release-note tasks.
+Commit your changes before using Git-based release-note tasks.
 `RELEASE_NOTES.md` is the release-version source for packaging. The release-note
 targets synchronize its version to `src/Package.Metadata.props`, `package.json`,
 `package-lock.json`, `pyproject.toml`, and `uv.lock`.

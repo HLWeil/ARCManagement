@@ -4,17 +4,17 @@ open System.Text.RegularExpressions
 open Fake.Core
 open Helpers
 
-let project = "PolyglotTemplate"
-let gitOwner = "example-owner"
+let project = "ARCManagement"
+let gitOwner = "HLWeil"
 let projectRepo = $"https://github.com/{gitOwner}/{project}"
 let solutionFile = $"{project}.sln"
 let configuration = "Release"
-let sourceDirectory = "src/PolyglotTemplate"
-let allTestsProject = "tests/PolyglotTemplate/PolyglotTemplate.Tests.fsproj"
+let sourceDirectory = "src/ARCManagement"
+let allTestsProject = "tests/ARCManagement/ARCManagement.Tests.fsproj"
 let libraryProjects = [
-    $"{sourceDirectory}/PolyglotTemplate.fsproj"
-    $"{sourceDirectory}/PolyglotTemplate.Javascript.fsproj"
-    $"{sourceDirectory}/PolyglotTemplate.Python.fsproj"
+    $"{sourceDirectory}/ARCManagement.fsproj"
+    $"{sourceDirectory}/ARCManagement.Javascript.fsproj"
+    $"{sourceDirectory}/ARCManagement.Python.fsproj"
 ]
 let netPkgDir = "dist/net"
 let jsOutputDir = "dist/ts"

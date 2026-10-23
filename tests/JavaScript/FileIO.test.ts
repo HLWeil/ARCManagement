@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { describe, expect, it } from 'vitest';
-import { ensureDirectoryAsync, readTextAsync, writeTextAsync } from 'polyglottemplate';
+import { ensureDirectoryAsync, readTextAsync, writeTextAsync } from 'arcmanagement';
 
 describe('public npm file helpers', () => {
   it('imports the model without Node globals and rejects browser file I/O', () => {
@@ -28,7 +28,7 @@ describe('public npm file helpers', () => {
   });
 
   it('roundtrips UTF-8, overwrites, and propagates errors', async () => {
-    const directory = await mkdtemp(join(tmpdir(), 'polyglot-template-native-'));
+    const directory = await mkdtemp(join(tmpdir(), 'arc-management-native-'));
     try {
       const nested = join(directory, 'nested', 'child');
       await ensureDirectoryAsync(nested);

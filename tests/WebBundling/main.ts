@@ -1,4 +1,4 @@
-import { ExampleModel, getRuntimeName } from 'polyglottemplate';
+import { ExampleModel, getRuntimeName } from 'arcmanagement';
 
 const model = new ExampleModel('browser', 1);
 model.Increment(1);

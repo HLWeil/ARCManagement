@@ -1,8 +1,8 @@
-module PolyglotTemplate.Tests.FileIO
+module ARCManagement.Tests.FileIO
 
 open Fable.Pyxpecto
-open PolyglotTemplate
-open PolyglotTemplate.CrossAsync
+open ARCManagement
+open ARCManagement.CrossAsync
 open TestingUtils
 
 let tests = testList "FileIO" [

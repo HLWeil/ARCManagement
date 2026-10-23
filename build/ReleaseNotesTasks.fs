@@ -37,4 +37,4 @@ let updatePreReleaseNotes = BuildTask.createFn "PreReleaseNotes" [] (fun config 
     synchronizeVersions ())
 
 let githubDraft = BuildTask.createFn "GithubDraft" [] (fun config ->
-    Github.draft(gitOwner, project, Some "Release of the polyglot library.", None, config))
+    Github.draft(gitOwner, project, Some "Release of ARCManagement.", None, config))

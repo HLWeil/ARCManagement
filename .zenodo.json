@@ -1,14 +1,14 @@
 {
-  "title": "PolyglotTemplate",
-  "description": "Example F# library published for .NET, JavaScript, and Python.",
+  "title": "ARCManagement",
+  "description": "F# library for managing ARCs (Annotated Research Contexts), published for .NET, JavaScript, and Python.",
   "license": "MIT",
   "creators": [
-    { "name": "Author, Example", "affiliation": "Example Organization" }
+    { "name": "Weil, Heinrich Lukas", "affiliation": "RPTU Kaiserslautern-Landau", "orcid": "https://orcid.org/0000-0003-1945-6342" }
   ],
-  "keywords": ["F#", "Fable", "polyglot", "template"],
+  "keywords": ["RDM", "Research Data management", "ARC", "Annotated Research Context", "F#", "Fable"],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/example-owner/PolyglotTemplate",
+      "identifier": "https://github.com/HLWeil/ARCManagement",
       "relation": "isSupplementTo",
       "scheme": "url"
     }

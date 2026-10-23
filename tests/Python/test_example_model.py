@@ -1,4 +1,4 @@
-from polyglot_template import ExampleModel, get_runtime_name
+from arc_management import ExampleModel, get_runtime_name
 
 
 def test_attached_members_and_copy():
